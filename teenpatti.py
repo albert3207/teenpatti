@@ -11,13 +11,9 @@ player3 = Player("vicky")
 # list of players
 player_list = [player1, player2, player3]
 
-# randomise the player list:
-random_player_list = random.sample(player_list, len(player_list))
+random_player_list = random.sample(player_list, len(player_list))     # randomise the player list:
+total_players = len(random_player_list)  # total number of players
 
-# total number of players
-total_players = len(random_player_list)
-
-# creating a deck
-deck = Deck()
+deck = Deck()  # creating a deck
 
 deck.start(deck, random_player_list, total_players)
