@@ -122,7 +122,14 @@ class Deck:
         player.cards.append(first_value)
         return [first_key, first_value]
 
-    def start(self, random_player_list, total_players):
+    def start(self):
+
+        new_player_list = Player.new_player_list  ## list of players who wants to play the game
+
+        random_player_list = random.sample(new_player_list, len(new_player_list))  # randomise the player list:
+
+        total_players = len(random_player_list)  # total number of players
+
         assert total_players < 14, "total num of players must be less than 14 "
         assert total_players >= 2, "maximum of 2 players are required"
         self.shuffle()
