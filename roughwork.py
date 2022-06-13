@@ -61,16 +61,3 @@ var = {5: ('Ace', 1, 'heart'), 1: ('Ace', 1, 'diamond'), 2: ('Ace', 1, 'club'), 
 
 import random
 
-a = [1,2,3,4,5]
-print(a)
-random.shuffle(a)
-
-
-print(a)
-print(b)
-
-
-
-
-
-

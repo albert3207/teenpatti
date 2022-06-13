@@ -1,5 +1,6 @@
-
+import time
 import random
+from player import Player
 
 class Deck:
     shape = ["heart", "diamond" , "club", "spade"]
@@ -40,12 +41,12 @@ class Deck:
                 break
         return Deck.dict
 
-    def suffle(self):
+    def shuffle(self):
 
         ##shuffle the dictionary using shuffle methods from random module
 
         keys = list(self.deck.keys())
-        print(keys)
+
         random.shuffle(keys)
         shuffled_deck = {}
         for key in keys:
@@ -89,10 +90,27 @@ class Deck:
                        48: ('King', 13, 'heart'),
                        49: ('King', 13, 'diamond'), 50: ('King', 13, 'club'), 51: ('King', 13, 'spade')}
 
-    def deal(self):
+        return self.__deck
+
+    def deal(self, player):
         #get the first card from the deck and return it
 
         first_key = next(iter(self.deck))
         first_value = self.deck[next(iter(self.deck))]
         del self.__deck[first_key]
-        return (first_key, first_value)
+        time.sleep(1)
+        player.hascard.update({first_key: first_value})
+        return [first_key, first_value]
+
+
+    def start(self, deck, random_player_list, total_players ):
+        assert total_players < 14, "total num of players must be less than 14 "
+        deck.shuffle()
+        print(deck.deck)
+        for i in range(3):
+            for player in random_player_list:
+                a = deck.deal(player)
+                print(player.name, a)
+
+
+

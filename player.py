@@ -6,7 +6,7 @@ class Player():
         # self.id = id(self)    #python inbuilt id function ( i am using uuid instead of the id(), no particular
         # readons)
         self.__id = self.randomidgeberator()
-        self.__hascard = 0
+        self.__hascard = {}
 
     def randomidgeberator(self):
         id = uuid.uuid1()
@@ -19,3 +19,7 @@ class Player():
     @property
     def hascard(self):
         return self.__hascard
+
+    @hascard.setter
+    def hascard(self, value):
+        self._hascard = value
