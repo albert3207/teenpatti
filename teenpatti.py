@@ -29,4 +29,5 @@ deck = Deck()  # creating a deck
 
 deck.start(random_player_list, total_players)    #staring the game and issuing the cards to all the players
 
+deck.show_result()
 

@@ -3,6 +3,8 @@ import uuid
 class Player():
     total_player_list=[]
     new_player_list = []
+    # cards = []
+
     def __init__(self, name):
         self.name = name
         # self.id = id(self)    #python inbuilt id function ( i am using uuid instead of the id(), no particular
@@ -11,7 +13,8 @@ class Player():
         self.__hascard = {}
         Player.total_player_list.append(self)
         self.credit = 500   ## all players have default credit value up to 500
-
+        self.cards = list()
+        self.totalcardvalue = 0
 
     def randomidgeberator(self):
         id = uuid.uuid1()
