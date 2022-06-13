@@ -1,12 +1,17 @@
 import uuid
 
 class Player():
+    total_player_list=[]
+    new_player_list = []
     def __init__(self, name):
         self.name = name
         # self.id = id(self)    #python inbuilt id function ( i am using uuid instead of the id(), no particular
         # readons)
         self.__id = self.randomidgeberator()
         self.__hascard = {}
+        Player.total_player_list.append(self)
+        self.credit = 500   ## all players have default credit value up to 500
+
 
     def randomidgeberator(self):
         id = uuid.uuid1()

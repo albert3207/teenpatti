@@ -103,13 +103,14 @@ class Deck:
         return [first_key, first_value]
 
 
-    def start(self, deck, random_player_list, total_players ):
+    def start(self, random_player_list, total_players ):
         assert total_players < 14, "total num of players must be less than 14 "
-        deck.shuffle()
-        print(deck.deck)
+        assert total_players >= 2 , "maximum of 2 players are required"
+        self.shuffle()
+        print(self.__deck)
         for i in range(3):
             for player in random_player_list:
-                a = deck.deal(player)
+                a = self.deal(player)
                 print(player.name, a)
 
 

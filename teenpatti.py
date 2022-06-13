@@ -7,13 +7,26 @@ from player import Player
 player1 = Player("sunny")
 player2 = Player("smith")
 player3 = Player("vicky")
+player4 = Player("celesti")
 
-# list of players
-player_list = [player1, player2, player3]
+player_list = Player.total_player_list  # list of all players
 
-random_player_list = random.sample(player_list, len(player_list))     # randomise the player list:
+##asking all the registered players whether they want to play the game, if yes, the credit of "50" will be deducted
+for player in player_list:
+    answer = input(f"Hey {player.name},  Do you want to play game? answer in y or n :")
+    if answer == "y":
+        player.credit = player.credit - 50
+        ## adding player to the new list:
+        Player.new_player_list.append(player)
+
+new_player_list = Player.new_player_list  ## list of players who wants to play the game
+
+random_player_list = random.sample(new_player_list, len(new_player_list))  # randomise the player list:
+
 total_players = len(random_player_list)  # total number of players
 
 deck = Deck()  # creating a deck
 
-deck.start(deck, random_player_list, total_players)
+deck.start(random_player_list, total_players)    #staring the game and issuing the cards to all the players
+
+
