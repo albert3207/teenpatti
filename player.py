@@ -31,3 +31,13 @@ class Player():
     @hascard.setter
     def hascard(self, value):
         self._hascard = value
+
+    def getcards(self):
+        threecards = []
+        for card in self.cards:
+            cardshape = card[2][0]
+            cardvalue = card[1]
+            threecards.append([cardshape, cardvalue])
+        return threecards
+
+

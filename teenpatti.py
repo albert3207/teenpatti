@@ -1,7 +1,7 @@
-import random
+
 from deck import Deck
-from card import Card
 from player import Player
+from teenpattirules import Rules
 
 ## creating players:
 player1 = Player("sunny")
@@ -19,6 +19,7 @@ for player in Player.total_player_list:
 
 
 deck = Deck()  # creating a deck
+
 
 deck.start()    #staring the game and issuing the cards to all the players
 
