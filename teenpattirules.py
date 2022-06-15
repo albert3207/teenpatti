@@ -21,7 +21,7 @@ class Rules:
                 isflush = True
 
             variabletosavevalue = cardshape
-        return {"isflush": isflush}
+        return {"isFlush": isflush}
 
     @staticmethod
     def isStraight(threecards):
@@ -32,15 +32,15 @@ class Rules:
         for key, value in Rules.straight_order_value.items():
             if cardvalue == value:
                 valueofsequence = key
-                return {"isstraight": True, "valueofsequence": valueofsequence}
-        return {"isstraight": False}
+                return {"isStraight": True, "valueofsequence": valueofsequence}
+        return {"isStraight": False}
 
     @staticmethod
     def isSraightFlush(threecards):
         isflush = Rules.isFlush(threecards)
-        if isflush["isflush"]:
+        if isflush["isFlush"]:
             isstraight = Rules.isStraight(threecards)
-            if isstraight["isstraight"]:
+            if isstraight["isStraight"]:
                 return {"isSraightFlush": True}
         return {"isSraightFlush": False}
 
@@ -93,7 +93,6 @@ class Rules:
             cardvalues.append(card[1])
         cardvalues.sort(reverse=True)
         return {"thirdhighcard": cardvalues[2]}
-
 
 
 

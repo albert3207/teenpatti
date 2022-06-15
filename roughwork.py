@@ -35,21 +35,20 @@ var = {5: ('Ace', 1, 'heart'), 1: ('Ace', 1, 'diamond'), 2: ('Ace', 1, 'club'), 
        49: ('King', 13, 'diamond'), 50: ('King', 13, 'club'), 51: ('King', 13, 'spade')}
 
 var2 = {0: ('Ace', 1, {'heart': 1}), 1: ('Ace', 1, {'diamond': 2}), 2: ('Ace', 1, {'club': 3}),
-       3: ('Ace', 1, {'spade': 4}), 4: ('2', 2, {'heart': 1}), 5: ('2', 2, {'diamond': 2}), 6: ('2', 2, {'club': 3}),
-       7: ('2', 2, {'spade': 4}), 8: ('3', 3, {'heart': 1}), 9: ('3', 3, {'diamond': 2}), 10: ('3', 3, {'club': 3}),
-       11: ('3', 3, {'spade': 4}), 12: ('4', 4, {'heart': 1}), 13: ('4', 4, {'diamond': 2}), 14: ('4', 4, {'club': 3}),
-       15: ('4', 4, {'spade': 4}), 16: ('5', 5, {'heart': 1}), 17: ('5', 5, {'diamond': 2}), 18: ('5', 5, {'club': 3}),
-       19: ('5', 5, {'spade': 4}), 20: ('6', 6, {'heart': 1}), 21: ('6', 6, {'diamond': 2}), 22: ('6', 6, {'club': 3}),
-       23: ('6', 6, {'spade': 4}), 24: ('7', 7, {'heart': 1}), 25: ('7', 7, {'diamond': 2}), 26: ('7', 7, {'club': 3}),
-       27: ('7', 7, {'spade': 4}), 28: ('8', 8, {'heart': 1}), 29: ('8', 8, {'diamond': 2}), 30: ('8', 8, {'club': 3}),
-       31: ('8', 8, {'spade': 4}), 32: ('9', 9, {'heart': 1}), 33: ('9', 9, {'diamond': 2}), 34: ('9', 9, {'club': 3}),
-       35: ('9', 9, {'spade': 4}), 36: ('10', 10, {'heart': 1}), 37: ('10', 10, {'diamond': 2}),
-       38: ('10', 10, {'club': 3}), 39: ('10', 10, {'spade': 4}), 40: ('Jack', 11, {'heart': 1}),
-       41: ('Jack', 11, {'diamond': 2}), 42: ('Jack', 11, {'club': 3}), 43: ('Jack', 11, {'spade': 4}),
-       44: ('Queen', 12, {'heart': 1}), 45: ('Queen', 12, {'diamond': 2}), 46: ('Queen', 12, {'club': 3}),
-       47: ('Queen', 12, {'spade': 4}), 48: ('King', 13, {'heart': 1}), 49: ('King', 13, {'diamond': 2}),
-       50: ('King', 13, {'club': 3}), 51: ('King', 13, {'spade': 4})}
-
+        3: ('Ace', 1, {'spade': 4}), 4: ('2', 2, {'heart': 1}), 5: ('2', 2, {'diamond': 2}), 6: ('2', 2, {'club': 3}),
+        7: ('2', 2, {'spade': 4}), 8: ('3', 3, {'heart': 1}), 9: ('3', 3, {'diamond': 2}), 10: ('3', 3, {'club': 3}),
+        11: ('3', 3, {'spade': 4}), 12: ('4', 4, {'heart': 1}), 13: ('4', 4, {'diamond': 2}), 14: ('4', 4, {'club': 3}),
+        15: ('4', 4, {'spade': 4}), 16: ('5', 5, {'heart': 1}), 17: ('5', 5, {'diamond': 2}), 18: ('5', 5, {'club': 3}),
+        19: ('5', 5, {'spade': 4}), 20: ('6', 6, {'heart': 1}), 21: ('6', 6, {'diamond': 2}), 22: ('6', 6, {'club': 3}),
+        23: ('6', 6, {'spade': 4}), 24: ('7', 7, {'heart': 1}), 25: ('7', 7, {'diamond': 2}), 26: ('7', 7, {'club': 3}),
+        27: ('7', 7, {'spade': 4}), 28: ('8', 8, {'heart': 1}), 29: ('8', 8, {'diamond': 2}), 30: ('8', 8, {'club': 3}),
+        31: ('8', 8, {'spade': 4}), 32: ('9', 9, {'heart': 1}), 33: ('9', 9, {'diamond': 2}), 34: ('9', 9, {'club': 3}),
+        35: ('9', 9, {'spade': 4}), 36: ('10', 10, {'heart': 1}), 37: ('10', 10, {'diamond': 2}),
+        38: ('10', 10, {'club': 3}), 39: ('10', 10, {'spade': 4}), 40: ('Jack', 11, {'heart': 1}),
+        41: ('Jack', 11, {'diamond': 2}), 42: ('Jack', 11, {'club': 3}), 43: ('Jack', 11, {'spade': 4}),
+        44: ('Queen', 12, {'heart': 1}), 45: ('Queen', 12, {'diamond': 2}), 46: ('Queen', 12, {'club': 3}),
+        47: ('Queen', 12, {'spade': 4}), 48: ('King', 13, {'heart': 1}), 49: ('King', 13, {'diamond': 2}),
+        50: ('King', 13, {'club': 3}), 51: ('King', 13, {'spade': 4})}
 
 # print (var[next(iter(var))])
 # import random
@@ -98,7 +97,7 @@ var2 = {0: ('Ace', 1, {'heart': 1}), 1: ('Ace', 1, {'diamond': 2}), 2: ('Ace', 1
 # print(creatingdeck())
 
 
- # playercards = [('Ace', 1, ['diamond', 1]), ('9', 9, ['diamond', 2]), ('King', 13, ['diamond', 2])]
+# playercards = [('Ace', 1, ['diamond', 1]), ('9', 9, ['diamond', 2]), ('King', 13, ['diamond', 2])]
 #
 # threecards = []
 #
@@ -177,9 +176,56 @@ var2 = {0: ('Ace', 1, {'heart': 1}), 1: ('Ace', 1, {'diamond': 2}), 2: ('Ace', 1
 
 
 # sharight_order_value = ([1, 2, 3], [2, 3, 4], [3, 4, 5])
-sharight_order_value = [(1, 2, 3), (2, 3, 4), (3, 4, 5)]
-example = (1,2,3)
-a = None
-if example in sharight_order_value:
-       a = True
-print(a)
+# sharight_order_value = [(1, 2, 3), (2, 3, 4), (3, 4, 5)]
+# example = (1,2,3)
+# a = None
+# if example in sharight_order_value:
+#        a = True
+# print(a)
+# playerwithsamevalue = [{'playername': 'sunny', 'value': 50, 'winnincombination': [13, 6, 4]}, {'playername': 'smith', 'value': 50, 'winnincombination': [10, 8, 5]}, {'playername': 'vicky', 'value': 50, 'winnincombination': [9, 7, 5]}]
+#
+#
+#
+#
+# winhand = None
+# playerwinner = []
+# for player in playerwithsamevalue:
+#     if winhand is not None:
+#         if winhand < player["winnincombination"]:
+#             playerwinner.clear()
+#             playerwinner.append({"playername": player["playername"], "winnincombination": player["winnincombination"]})
+#     winhand = player["winnincombination"]
+#     playerwinner.append(
+#         {"playername": player["playername"], "winnincombination": player["winnincombination"]})
+#
+# print(playerwinner)
+
+
+playerwithsamevalue = [{'playername': 'smith', 'value': 80, 'winnincombination': [4, 3, 2], 'winnincombinationvalue': 1},
+       {'playername': 'vicky', 'value': 80, 'winnincombination': [3, 2, 1], 'winnincombinationvalue': 11},
+       {'playername': 'jim', 'value': 80, 'winnincombination': [3, 2, 1], 'winnincombinationvalue': 11}]
+
+value = playerwithsamevalue[0]["value"]
+
+if value == 80:
+    winhand = None
+    playerwinner = []
+
+    for player in playerwithsamevalue:
+        if winhand is not None:
+            if winhand > player["winnincombinationvalue"]:
+                continue
+            if winhand < player["winnincombinationvalue"]:
+                winhand = player["winnincombinationvalue"]
+                playerwinner.clear()
+                playerwinner.append(
+                    {"playername": player["playername"], "winnincombination": player["winnincombination"]})
+                continue
+            if winhand == player["winnincombinationvalue"]:  
+                playerwinner.append(
+                    {"playername": player["playername"], "winnincombination": player["winnincombination"]})
+                continue
+        winhand = player["winnincombinationvalue"]
+        playerwinner.append(
+            {"playername": player["playername"], "winnincombination": player["winnincombination"]})
+    print(playerwinner)
